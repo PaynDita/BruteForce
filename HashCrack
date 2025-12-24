@@ -1,1 +1,4 @@
 https://hashes.com/en/decrypt/hash
+nth.skerritt.blog
+
+hashcat --identify <hash>
